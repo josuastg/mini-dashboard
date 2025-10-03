@@ -30,7 +30,7 @@
     <!-- Layout utama -->
     <div v-else class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
       <!-- Gambar -->
-      <div class="flex justify-center">
+      <div class="flex bg-gray-300 p-10 max-w-max rounded-xl">
         <img :src="product.image" :alt="product.title" class="w-full max-w-sm h-auto object-contain" />
       </div>
 
