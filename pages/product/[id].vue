@@ -41,7 +41,9 @@
 
         <!-- Rating -->
         <div class="flex items-center text-sm space-x-1">
-          <Icon icon="mdi:star" class="text-yellow-500 w-5 h-5" />
+          <ClientOnly>
+            <Icon icon="mdi:star" class="text-yellow-500 w-5 h-5" />
+          </ClientOnly>
           <span>{{ product.rating?.rate }}</span>
           <span class="text-gray-500">({{ product.rating?.count }})</span>
         </div>
