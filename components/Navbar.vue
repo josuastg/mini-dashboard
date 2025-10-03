@@ -14,34 +14,46 @@
       <!-- Menu -->
       <ul class="flex space-x-6 text-gray-700 items-center font-medium">
         <li>
-          <NuxtLink :to="{ path: '/', query: { category: 'men\'s clothing' } }" :class="[
-            'hover:text-black',
-            route.query.category === `men's clothing` ? 'font-bold text-black' : ''
-          ]">
+          <NuxtLink 
+            :to="`/product/category/${encodeURIComponent(`men's clothing`)}`" 
+            :class="[
+              'hover:text-black',
+              route.params.name === `men's clothing` ? 'font-bold text-black' : ''
+            ]"
+          >
             Men
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink :to="{ path: '/', query: { category: 'women\'s clothing' } }" :class="[
-            'hover:text-black',
-            route.query.category === `women's clothing` ? 'font-bold text-black' : ''
-          ]">
+          <NuxtLink 
+            :to="`/product/category/${encodeURIComponent(`women's clothing`)}`" 
+            :class="[
+              'hover:text-black',
+              route.params.name === `women's clothing` ? 'font-bold text-black' : ''
+            ]"
+          >
             Women
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink :to="{ path: '/', query: { category: 'jewelery' } }" :class="[
-            'hover:text-black',
-            route.query.category === 'jewelery' ? 'font-bold text-black' : ''
-          ]">
+          <NuxtLink 
+            :to="`/product/category/${encodeURIComponent('jewelery')}`" 
+            :class="[
+              'hover:text-black',
+              route.params.name === 'jewelery' ? 'font-bold text-black' : ''
+            ]"
+          >
             Jewelry
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink :to="{ path: '/', query: { category: 'electronics' } }" :class="[
-            'hover:text-black',
-            route.query.category === 'electronics' ? 'font-bold text-black' : ''
-          ]">
+          <NuxtLink 
+            :to="`/product/category/${encodeURIComponent('electronics')}`" 
+            :class="[
+              'hover:text-black',
+              route.params.name === 'electronics' ? 'font-bold text-black' : ''
+            ]"
+          >
             Electronic
           </NuxtLink>
         </li>
@@ -51,9 +63,9 @@
 </template>
 
 <script setup lang="ts">
-
 const hasShadow = ref(false)
-const route = useRoute();
+const route = useRoute()
+
 const handleScroll = () => {
   hasShadow.value = window.scrollY > 10
 }
@@ -68,9 +80,7 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* biar konten ga ketutup navbar */
 :global(body) {
   padding-top: 64px;
-  /* sesuaikan dengan tinggi navbar */
 }
 </style>
