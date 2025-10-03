@@ -9,7 +9,7 @@ It demonstrates skills in Vue 3 / Nuxt 3, Tailwind CSS, and responsive UI develo
 1. Responsive design for mobile, tablet, and desktop
 2. Product list with search, category filter, and pagination
 3. Product detail page with skeleton loading, error handling, and product not found state
-4. Reusable components: Navbar, HeroBanner, SearchBar, CategoryFilter, ProductCard, Pagination
+4. Reusable components: SearchBar, CategoryFilter, ProductCard, Pagination
 5. Smooth UX with loading states, transitions, and debounced search
 ```
 # Deployment
