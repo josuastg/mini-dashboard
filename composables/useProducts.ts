@@ -43,16 +43,8 @@ export const useProducts = () => {
     return await fetchProducts(1, q, selectedCategory.value)
   }
 
-  const router = useRouter()
   const filterByCategory = async (cat: string) => {
     selectedCategory.value = cat
-    router.push({
-      path: '/',
-      query: {
-        ...(searchQuery.value ? { search: searchQuery.value } : {}),
-        ...(cat ? { category: cat } : {})
-      }
-    })
     return await fetchProducts(1, searchQuery.value, cat)
   }
 
@@ -62,13 +54,6 @@ export const useProducts = () => {
     () => fetchProducts(page.value, searchQuery.value, selectedCategory.value),
     { lazy: true }
   )
-
-  // setelah hydration pertama → matikan skeleton
-  onMounted(() => {
-    if (!pending.value && products.value.length > 0) {
-      loading.value = false
-    }
-  })
 
   watch(pending, (val) => (loading.value = val))
   watch(initialError, (err) => {
