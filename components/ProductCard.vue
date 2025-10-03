@@ -20,7 +20,6 @@ const props = defineProps({
 
 const categories = computed(() => {
   let result = '';
-  console.log(props.product.category)
   switch (props.product.category) {
     case "men's clothing":
       result = 'Men';
