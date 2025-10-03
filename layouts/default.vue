@@ -10,7 +10,7 @@
 
     <!-- Footer -->
     <footer class="bg-gray-100 text-center p-4 text-sm text-gray-500">
-      © 2025 Mini Dashboard
+      © 2025 Mini Store
     </footer>
   </div>
 </template>
