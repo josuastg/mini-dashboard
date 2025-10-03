@@ -1,0 +1,22 @@
+<template>
+  <div class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <Navbar />
+
+    <!-- Content -->
+    <main class="flex-1 container mx-auto p-4">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 text-center p-4 text-sm text-gray-500">
+      © 2025 Mini Dashboard
+    </footer>
+  </div>
+</template>
+
+<script lang="ts" setup>
+
+</script>
+
+<style></style>
