@@ -1,11 +1,10 @@
 <template>
   <section>
     <!-- Banner Section -->
-
     <HeroBanner image="/img/hero_banner.png" />
 
+    <!-- Kiri (Judul & info) -->
     <div class="flex flex-col md:flex-row md:items-center md:justify-between my-8 gap-y-4 md:gap-y-0">
-      <!-- Kiri (Judul & info) -->
       <div>
         <h2 v-if="!searchQuery.length" class="text-xl font-semibold">All Product</h2>
         <h2 v-else class="text-xl font-normal">
@@ -71,17 +70,4 @@ const handlePageChange = async (newPage: number) => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
-const route = useRoute()
-
-watch(
-  () => route.query.category,
-  (cat: any) => {
-    if (cat) {
-      filterByCategory(cat as string)
-    } else {
-      filterByCategory('')
-    }
-  },
-  { immediate: true }
-)
 </script>
